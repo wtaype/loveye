@@ -1,5 +1,6 @@
 
 // INFORMACIÓN DEL APP 
+export let id = 'loveye'
 export let app = 'LoveEye'
 export let titulo = 'I love Eye!'
 export let lanzamiento = 2026;
