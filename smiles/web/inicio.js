@@ -1,310 +1,326 @@
 import './inicio.css';
 import $ from 'jquery';
-import { app, version } from '../wii.js';
-import { abrirModal, cerrarModal } from '../widev.js';
+import { app } from '../wii.js';
+import { wiVista, Saludar } from '../widev.js';
+
+// Datos de las 9 secciones de navegación
+const navSections = [
+  {
+    icon: 'fa-shield-heart',
+    title: 'Prevención',
+    desc: 'Tips y consejos esenciales para cuidar tus ojos diariamente',
+    color: '--success',
+    link: '/prevencion'
+  },
+  {
+    icon: 'fa-stethoscope',
+    title: 'Diagnóstico',
+    desc: 'Información sobre condiciones oculares y señales de alerta',
+    color: '--info',
+    link: '/diagnostico'
+  },
+  {
+    icon: 'fa-pills',
+    title: 'Tratamiento',
+    desc: 'Opciones de tratamiento, soluciones y remedios efectivos',
+    color: '--warning',
+    link: '/tratamiento'
+  },
+  {
+    icon: 'fa-dumbbell',
+    title: 'Rutinas',
+    desc: 'Ejercicios y hábitos saludables para fortalecer tu visión',
+    color: '--Paz',
+    link: '/rutinas'
+  },
+  {
+    icon: 'fa-clipboard-list',
+    title: 'Exámenes',
+    desc: 'Pruebas y chequeos oftalmológicos que debes conocer',
+    color: '--Cielo',
+    link: '/examenes'
+  },
+  {
+    icon: 'fa-microscope',
+    title: 'Tecnología',
+    desc: 'Equipos e innovaciones en oftalmología moderna',
+    color: '--Mora',
+    link: '/tecnologia'
+  },
+  {
+    icon: 'fa-glasses',
+    title: 'Lentes',
+    desc: 'Tipos de lentes correctivos, de contacto y protección',
+    color: '--mco',
+    link: '/lentes'
+  },
+  {
+    icon: 'fa-lightbulb',
+    title: 'Curiosidades',
+    desc: 'Datos fascinantes e interesantes sobre la visión humana',
+    color: '--Dulce',
+    link: '/curiosidades'
+  },
+  {
+    icon: 'fa-info-circle',
+    title: 'Acerca',
+    desc: 'Conoce nuestra historia, misión y propósito',
+    color: '--hv',
+    link: '/acerca'
+  }
+];
+
+// Estadísticas impactantes sobre salud ocular
+const stats = [
+  { number: 2200, label: 'Millones con problemas visuales', suffix: 'M+' },
+  { number: 80, label: 'De casos son prevenibles', suffix: '%' },
+  { number: 20, label: 'Regla 20-20-20 (minutos)', suffix: '' },
+  { number: 100, label: 'Tu visión es invaluable', suffix: '%' }
+];
 
 export const render = () => `
   <div class="inicio_container">
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero_content">
-        <div class="hero_badge">
-          <i class="fas fa-fire"></i>
-          <span>El Centro Multimedia #1 del 2026</span>
+        <div class="hero_saludo">
+          <span class="saludo_texto">${Saludar()} Amigo!</span>
+          <span class="saludo_emoji">👋</span>
         </div>
         <h1 class="hero_title">
-          Reproduce tus <span class="gradient_text">Videos, Audios e Imágenes</span> en un solo lugar
+          Bienvenido a <span class="gradient_text">${app}</span>
         </h1>
+        <div class="hero_roles">
+          <span class="role active">Amor por tus Ojitos 👁️💙</span>
+          <span class="role">Cuidado y Prevención Visual</span>
+          <span class="role">Información Confiable</span>
+        </div>
         <p class="hero_subtitle">
-          Privado. Rápido. Sin límites. 100% gratis para siempre.
+          Tu compañero en el cuidado de la salud ocular. Aquí encontrarás herramientas, 
+          información y esperanza para cuidar el regalo más precioso: tu visión.
         </p>
+        <div class="hero_stats">
+          <div class="stat_card">
+            <div class="stat_number" data-target="9">0</div>
+            <div class="stat_label">Secciones</div>
+          </div>
+          <div class="stat_card">
+            <div class="stat_number" data-target="100">0</div>
+            <div class="stat_label">% Gratis</div>
+          </div>
+          <div class="stat_card">
+            <div class="stat_number" data-target="24">0</div>
+            <div class="stat_label">Horas/7 días</div>
+          </div>
+        </div>
         <div class="hero_actions">
-          <a href="/videos" class="btn_primary">
-            <i class="fas fa-play-circle"></i>
+          <a href="/prevencion" class="btn_primary">
+            <i class="fas fa-rocket"></i>
             <span>Comenzar Ahora</span>
           </a>
-          <button class="btn_secondary" id="btnDemo">
-            <i class="fas fa-video"></i>
-            <span>Ver Demo</span>
-          </button>
-        </div>
-        <div class="hero_stats">
-          <div class="stat_mini">
-            <i class="fas fa-check-circle"></i>
-            <span>3 Reproductores</span>
-          </div>
-          <div class="stat_mini">
-            <i class="fas fa-check-circle"></i>
-            <span>100% Privado</span>
-          </div>
-          <div class="stat_mini">
-            <i class="fas fa-check-circle"></i>
-            <span>Sin Anuncios</span>
-          </div>
+          <a href="/acerca" class="btn_secondary">
+            <i class="fas fa-heart"></i>
+            <span>Nuestra Historia</span>
+          </a>
         </div>
       </div>
       <div class="hero_visual">
-        <div class="floating_card card_1">
-          <div class="card_icon">
-            <i class="fas fa-video"></i>
-          </div>
-          <div class="card_text">
-            <strong>Videos</strong>
-            <span>MP4, WebM, OGG</span>
-          </div>
-        </div>
-        <div class="floating_card card_2">
-          <div class="card_icon">
-            <i class="fas fa-music"></i>
-          </div>
-          <div class="card_text">
-            <strong>Audios</strong>
-            <span>MP3, WAV, M4A</span>
+        <div class="eye_container">
+          <div class="eye_ring"></div>
+          <div class="eye_ring ring2"></div>
+          <img src="/eyeCielo.png" 
+               alt="Ojo saludable" 
+               class="eye_img"
+               loading="lazy">
+          <div class="eye_badge">
+            <i class="fas fa-circle"></i>
+            <span>Cuidado 24/7</span>
           </div>
         </div>
-        <div class="floating_card card_3">
-          <div class="card_icon">
-            <i class="fas fa-images"></i>
-          </div>
-          <div class="card_text">
-            <strong>Imágenes</strong>
-            <span>JPG, PNG, GIF</span>
-          </div>
+        <div class="floating_icon icon1" title="Prevención">
+          <i class="fas fa-shield-heart"></i>
         </div>
-        <div class="hero_circle"></div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="feature_item">
-        <div class="feature_icon">
-          <i class="fas fa-video"></i>
+        <div class="floating_icon icon2" title="Diagnóstico">
+          <i class="fas fa-stethoscope"></i>
         </div>
-        <h3>Reproductor de Videos</h3>
-        <p>Controles avanzados con velocidad, loop y PiP</p>
-        <a href="/videos" class="feature_link">Probar ahora →</a>
-      </div>
-      <div class="feature_item">
-        <div class="feature_icon">
-          <i class="fas fa-music"></i>
+        <div class="floating_icon icon3" title="Tratamiento">
+          <i class="fas fa-pills"></i>
         </div>
-        <h3>Reproductor de Audios</h3>
-        <p>Ondas visuales en tiempo real con Web Audio API</p>
-        <a href="/audios" class="feature_link">Probar ahora →</a>
-      </div>
-      <div class="feature_item">
-        <div class="feature_icon">
-          <i class="fas fa-images"></i>
-        </div>
-        <h3>Visor de Imágenes</h3>
-        <p>Zoom inteligente, slideshow y galería</p>
-        <a href="/images" class="feature_link">Probar ahora →</a>
-      </div>
-    </section>
-
-    <section class="benefits">
-      <h2 class="section_title">
-        <i class="fas fa-star"></i> ¿Por qué elegir ${app}?
-      </h2>
-      <div class="benefits_grid">
-        <div class="benefit_card">
-          <div class="benefit_number">01</div>
-          <div class="benefit_icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>100% Privado</h3>
-          <p>Todo el procesamiento es local. Tus archivos nunca salen de tu navegador. Sin servidores, sin rastreo.</p>
-        </div>
-        <div class="benefit_card">
-          <div class="benefit_number">02</div>
-          <div class="benefit_icon">
-            <i class="fas fa-infinity"></i>
-          </div>
-          <h3>Sin Límites</h3>
-          <p>Reproduce todos los archivos que quieras. Sin restricciones de tamaño, duración o cantidad.</p>
-        </div>
-        <div class="benefit_card">
-          <div class="benefit_number">03</div>
-          <div class="benefit_icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h3>Ultra Rápido</h3>
-          <p>Carga instantánea. Sin tiempos de espera. Todo funciona en tu dispositivo sin conexión.</p>
-        </div>
-        <div class="benefit_card">
-          <div class="benefit_number">04</div>
-          <div class="benefit_icon">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3>5 Temas Visuales</h3>
-          <p>Diseño moderno con temas personalizables: Cielo, Dulce, Paz, Mora y Futuro.</p>
+        <div class="floating_icon icon4" title="Rutinas">
+          <i class="fas fa-dumbbell"></i>
         </div>
       </div>
     </section>
 
+    <!-- MISIÓN Y PROPÓSITO -->
+    <section class="mission">
+      <div class="section_header">
+        <h2 class="section_title">Nuestra Misión</h2>
+        <div class="section_line"></div>
+      </div>
+      <div class="mission_grid">
+        <div class="mission_card card_proposito">
+          <div class="card_icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Nuestro Propósito</h3>
+          <ul class="mission_list">
+            <li><i class="fas fa-check-circle"></i>Amor por tus ojitos</li>
+            <li><i class="fas fa-check-circle"></i>Información confiable</li>
+            <li><i class="fas fa-check-circle"></i>Herramientas útiles</li>
+            <li><i class="fas fa-check-circle"></i>Esperanza y fe</li>
+          </ul>
+        </div>
+        <div class="mission_card card_historia">
+          <div class="card_icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Nuestra Historia</h3>
+          <div class="timeline">
+            <div class="timeline_item">
+              <div class="timeline_dot"></div>
+              <div class="timeline_content">
+                <span class="timeline_year">2026</span>
+                <p>Nace ${app} con amor y esperanza</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="timeline_dot"></div>
+              <div class="timeline_content">
+                <span class="timeline_year">Hoy</span>
+                <p>Ayudando a cuidar miles de ojitos</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="timeline_dot"></div>
+              <div class="timeline_content">
+                <span class="timeline_year">Futuro</span>
+                <p>Seguir creciendo con fe en Dios</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mission_card card_valores">
+          <div class="card_icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Nuestros Valores</h3>
+          <p class="mission_text">
+            ${app} nació de una experiencia personal. Creo que para Dios no hay nada imposible. 
+            Este proyecto es mi forma de agradecer por mis ojitos y ayudar a otros a cuidar los suyos 
+            con amor, fe y esperanza.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVEGACIÓN VISUAL -->
+    <section class="nav_visual">
+      <div class="section_header">
+        <h2 class="section_title">Explora Nuestras Herramientas</h2>
+        <div class="section_line"></div>
+      </div>
+      <div class="nav_grid">
+        ${navSections.map(section => `
+          <a href="${section.link}" class="nav_card" data-page="${section.link.slice(1)}">
+            <div class="nav_card_icon" style="background: linear-gradient(135deg, var(${section.color}) 0%, var(--hv) 100%); color: var(--txa);">
+              <i class="fas ${section.icon}"></i>
+            </div>
+            <h3 class="nav_card_title">${section.title}</h3>
+            <p class="nav_card_desc">${section.desc}</p>
+            <div class="nav_card_arrow">
+              <i class="fas fa-arrow-right"></i> Explorar
+            </div>
+          </a>
+        `).join('')}
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
     <section class="stats_section">
       <div class="stats_grid">
-        <div class="stat_box">
-          <div class="stat_number" data-count="2500">0</div>
-          <div class="stat_label">Usuarios Activos</div>
-        </div>
-        <div class="stat_box">
-          <div class="stat_number" data-count="10000">0</div>
-          <div class="stat_label">Archivos Procesados</div>
-        </div>
-        <div class="stat_box">
-          <div class="stat_number" data-count="8500">0</div>
-          <div class="stat_label">Sesiones Multimedia</div>
-        </div>
-        <div class="stat_box">
-          <div class="stat_number" data-count="99">0</div>
-          <div class="stat_label">% Satisfacción</div>
-        </div>
+        ${stats.map(stat => `
+          <div class="stat_box">
+            <div class="stat_number" data-count="${stat.number}">0${stat.suffix}</div>
+            <div class="stat_label">${stat.label}</div>
+          </div>
+        `).join('')}
       </div>
     </section>
-
-    <section class="how_it_works">
-      <h2 class="section_title">
-        <i class="fas fa-rocket"></i> Cómo funciona
-      </h2>
-      <div class="steps_grid">
-        <div class="step_item">
-          <div class="step_number">1</div>
-          <div class="step_icon">
-            <i class="fas fa-upload"></i>
-          </div>
-          <h3>Arrastra tus archivos</h3>
-          <p>Drag & Drop de videos, audios o imágenes directamente al reproductor</p>
-        </div>
-        <div class="step_arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <div class="step_item">
-          <div class="step_number">2</div>
-          <div class="step_icon">
-            <i class="fas fa-play-circle"></i>
-          </div>
-          <h3>Reproduce al instante</h3>
-          <p>Controles profesionales con todas las funciones que necesitas</p>
-        </div>
-        <div class="step_arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <div class="step_item">
-          <div class="step_number">3</div>
-          <div class="step_icon">
-            <i class="fas fa-smile"></i>
-          </div>
-          <h3>Disfruta sin límites</h3>
-          <p>100% gratis, sin anuncios, sin registro obligatorio</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="cta_content">
-        <div class="cta_icon">
-          <i class="fas fa-play-circle"></i>
-        </div>
-        <h2>¿Listo para disfrutar de tus archivos multimedia?</h2>
-        <p>Únete a <strong>+2,500 usuarios</strong> que ya usan ${app} diariamente</p>
-        <div class="cta_buttons">
-          <a href="/videos" class="cta_btn">
-            <i class="fas fa-rocket"></i>
-            <span>Comenzar Gratis Ahora</span>
-          </a>
-          <a href="/smile" class="cta_btn_outline">
-            <i class="fas fa-gauge"></i>
-            <span>Ir al Dashboard</span>
-          </a>
-        </div>
-        <p class="cta_note">
-          <i class="fas fa-check-circle"></i> Sin instalación
-          <i class="fas fa-check-circle"></i> Sin registro
-          <i class="fas fa-check-circle"></i> 100% gratis
-        </p>
-      </div>
-    </section>
-  </div>
-
-  <!-- MODAL DEMO -->
-  <div id="modalDemo" class="wiModal">
-    <div class="modalBody" style="background:var(--wb);max-width:800px">
-      <button class="modalX"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;font-family:var(--ff_P)">
-        <h2 style="color:var(--tx);margin-bottom:2vh;text-align:center">
-          <i class="fas fa-video" style="color:var(--mco)"></i> Demo de ${app}
-        </h2>
-        <div style="background:var(--bg1);padding:4vh 2vw;border-radius:12px;text-align:center">
-          <i class="fas fa-play-circle" style="font-size:5rem;color:var(--mco);margin-bottom:2vh"></i>
-          <h3 style="color:var(--tx);margin-bottom:1vh">Explora nuestros reproductores</h3>
-          <p style="color:var(--txe);margin-bottom:3vh">Prueba directamente todas las funciones:</p>
-          <div style="display:flex;gap:1vh;justify-content:center;flex-wrap:wrap">
-            <a href="/videos" class="btn_primary" style="display:inline-flex;margin:0.5vh">
-              <i class="fas fa-video"></i> Reproductor de Videos
-            </a>
-            <a href="/audios" class="btn_secondary" style="display:inline-flex;margin:0.5vh">
-              <i class="fas fa-music"></i> Reproductor de Audios
-            </a>
-            <a href="/images" class="btn_secondary" style="display:inline-flex;margin:0.5vh">
-              <i class="fas fa-images"></i> Visor de Imágenes
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 `;
 
 export const init = () => {
-  // Abrir modal demo
-  $('#btnDemo').on('click', () => {
-    abrirModal('modalDemo');
-  });
+  console.log(`✅ Inicio de ${app} cargado`);
 
-  // Cerrar modal
-  $('.modalX').on('click', function() {
-    cerrarModal('modalDemo');
-  });
+  // 🚀 ROLES ANIMADOS
+  const roles = $('.hero_roles .role');
+  let roleActual = 0;
+  setInterval(() => {
+    roles.removeClass('active');
+    roleActual = (roleActual + 1) % roles.length;
+    roles.eq(roleActual).addClass('active');
+  }, 3000);
 
-  // Animación de números
-  const animarNumeros = () => {
-    $('.stat_number').each(function() {
-      const $this = $(this);
-      const objetivo = parseInt($this.data('count'));
-      const duracion = 2000;
-      const pasos = 60;
-      const incremento = objetivo / pasos;
+  // 📊 STATS ANIMADOS (Hero)
+  wiVista('.hero_stats', () => {
+    $('.hero_stats .stat_number').each(function() {
+      const $num = $(this);
+      const objetivo = parseInt($num.data('target'));
       let actual = 0;
-      
-      const temporizador = setInterval(() => {
+      const incremento = objetivo / 50;
+      const timer = setInterval(() => {
         actual += incremento;
         if (actual >= objetivo) {
-          $this.text(objetivo.toLocaleString());
-          clearInterval(temporizador);
+          $num.text(objetivo + '+');
+          clearInterval(timer);
         } else {
-          $this.text(Math.floor(actual).toLocaleString());
+          $num.text(Math.floor(actual));
         }
-      }, duracion / pasos);
+      }, 30);
     });
-  };
+  });
 
-  // Observer para animación de números
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach(entrada => {
-      if (entrada.isIntersecting) {
-        animarNumeros();
-        observador.disconnect();
-      }
+  // 📊 STATS ANIMADOS (Sección de estadísticas)
+  wiVista('.stats_section', () => {
+    $('.stats_section .stat_number').each(function() {
+      const $this = $(this);
+      const objetivo = parseInt($this.data('count'));
+      const suffix = $this.text().replace(/[0-9]/g, '');
+      let actual = 0;
+      const incremento = objetivo / 60;
+      const timer = setInterval(() => {
+        actual += incremento;
+        if (actual >= objetivo) {
+          $this.text(objetivo.toLocaleString() + suffix);
+          clearInterval(timer);
+        } else {
+          $this.text(Math.floor(actual).toLocaleString() + suffix);
+        }
+      }, 30);
     });
-  }, { threshold: 0.3 });
+  });
 
-  const seccionStats = document.querySelector('.stats_section');
-  if (seccionStats) observador.observe(seccionStats);
+  // 👁️ ANIMACIÓN CARDS MISIÓN
+  wiVista('.mission_card', () => {
+    $('.mission_card').each((i, el) => {
+      setTimeout(() => $(el).addClass('visible'), i * 150);
+    });
+  });
 
-  console.log(`✅ Inicio completado`);
+  // 🎨 ANIMACIÓN CARDS NAVEGACIÓN
+  const navCards = document.querySelectorAll('.nav_card');
+  navCards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    setTimeout(() => {
+      card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 100 * index);
+  });
 };
 
 export const cleanup = () => {
-  $('#btnDemo, .modalX').off();
   console.log('🧹 Inicio limpiado');
 };
