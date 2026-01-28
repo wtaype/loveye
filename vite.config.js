@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/loveye/' : '/', // Firebase + GitHub Pages
+  base: '/', 
   build: {
     outDir: 'dist',
     minify: 'esbuild',
