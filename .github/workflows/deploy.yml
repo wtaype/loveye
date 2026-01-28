@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IS_TAG: ${{ github.ref_type == 'tag' }}
-      BASE_URL: ${{ github.ref_type == 'tag' && format('/{0}/', github.ref_name) || '/' }}
+      BASE_URL: ${{ github.ref_type == 'tag' && format('/loveye/{0}/', github.ref_name) || '/loveye/' }}
       DEST_DIR: ${{ github.ref_type == 'tag' && github.ref_name || '.' }}
       
     steps:
@@ -64,5 +64,5 @@ jobs:
 
       - run: |
           echo "✅ Deploy completado!"
-          echo "🔥 Firebase: https://loveye.web.app"
-          echo "🐙 GitHub: https://loveye"
+          echo "🔥 Firebase: https://loveye.web.app (solo main)"
+          echo "🐙 GitHub: https://wtaype.github.io/loveye/${{ env.DEST_DIR }}"
