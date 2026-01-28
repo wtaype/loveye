@@ -146,7 +146,7 @@ export const render = () => `
         </p>
       </div>
       <div class="lent_hero_visual">
-        <img src="/lentes.png" alt="Tipos de Lentes" class="lent_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}lentes.png" alt="Tipos de Lentes" class="lent_hero_img" loading="lazy">
       </div>
     </section>
 
@@ -161,7 +161,7 @@ export const render = () => `
       </div>
       <div class="simulador_content">
         <div class="simulador_image_container">
-          <img src="/eyeCielo.png" alt="Simulador de Visión" class="simulador_image" id="simuladorImg">
+          <img src="${import.meta.env.BASE_URL}eyeCielo.png" alt="Simulador de Visión" class="simulador_image" id="simuladorImg">
         </div>
         <div class="simulador_controls">
           <button class="simulador_btn active" data-vision="normal">

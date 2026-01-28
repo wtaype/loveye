@@ -397,7 +397,7 @@ export const render = () => `
         </p>
       </div>
       <div class="alim_hero_visual">
-        <img src="/alimentos.png" alt="Alimentos Saludables" class="alim_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}alimentos.png" alt="Alimentos Saludables" class="alim_hero_img" loading="lazy">
       </div>
     </section>
 

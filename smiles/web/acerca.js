@@ -113,7 +113,7 @@ export const render = () => `
         Un proyecto nacido del amor, la fe y el deseo de ayudar a otros a cuidar 
         el regalo más preciado: la visión. Porque tus ojitos merecen todo el amor del mundo.
       </p>
-      <img src="/acerca.png" alt="Curiosidades del Ojo" class="acer_hero_img" loading="lazy">
+      <img src="${import.meta.env.BASE_URL}acerca.png" alt="Curiosidades del Ojo" class="acer_hero_img" loading="lazy">
     </section>
 
     <!-- CURIOSIDADES -->
@@ -186,7 +186,7 @@ export const render = () => `
     <!-- CREADOR -->
     <section class="creador_section">
       <div class="creador_content">
-        <img src="/wilder.webp" alt="Wilder Taype" class="creador_foto">
+        <img src="${import.meta.env.BASE_URL}wilder.webp" alt="Wilder Taype" class="creador_foto">
         <div class="creador_info">
           <h3>Wilder Taype</h3>
           <div class="rol">Desarrollador Full Stack & Creador de Love Eye</div>

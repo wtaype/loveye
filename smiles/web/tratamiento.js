@@ -184,7 +184,7 @@ export const render = () => `
         </p>
       </div>
       <div class="trat_hero_visual">
-        <img src="/tratamiento.png" alt="Tratamiento Ocular" class="trat_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}tratamiento.png" alt="Tratamiento Ocular" class="trat_hero_img" loading="lazy">
       </div>
     </section>
 

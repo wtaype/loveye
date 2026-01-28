@@ -197,7 +197,7 @@ export const render = () => `
         </p>
       </div>
       <div class="exam_hero_visual">
-        <img src="/examenes.png" alt="Exámenes Oftalmológicos" class="exam_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}examenes.png" alt="Exámenes Oftalmológicos" class="exam_hero_img" loading="lazy">
       </div>
     </section>
 

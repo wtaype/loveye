@@ -204,7 +204,7 @@ export const render = () => `
         </p>
       </div>
       <div class="diag_hero_visual">
-        <img src="/diagnostico.png" alt="Diagnóstico Ocular" class="diag_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}diagnostico.png" alt="Diagnóstico Ocular" class="diag_hero_img" loading="lazy">
       </div>
     </section>
 

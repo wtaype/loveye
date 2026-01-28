@@ -128,7 +128,7 @@ export const render = () => `
         <div class="eye_container">
           <div class="eye_ring"></div>
           <div class="eye_ring ring2"></div>
-          <img src="/eyeCielo.png" 
+          <img src="${import.meta.env.BASE_URL}eyeCielo.png" 
                alt="Ojo saludable" 
                class="eye_img"
                loading="lazy">
