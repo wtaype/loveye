@@ -205,8 +205,9 @@
       align-items: center;
       padding: 0 2vw;
       backdrop-filter: blur(10px);
-      position: relative;
-      z-index: 100
+      z-index: 100;
+      position: fixed;
+      background: var(--bg);
     }
 
     .wiheader_left {
@@ -287,7 +288,11 @@
       gap: 0.2vh;
       padding: 0.5vh 0.8vw;
       background: var(--bg1);
-      border-radius: 0.8vh
+      border-radius: 0.8vh;
+      position: fixed;
+      flex-direction: column;
+      top: 28vh;
+      right: 0;
     }
 
     .tema {
@@ -466,7 +471,7 @@
       text-align: center
     }
 
-    .df {
+    .dpf {
       display: flex
     }
 
@@ -508,20 +513,21 @@
     @media (max-width:768px) {
       .wiheader {
         height: auto;
-        flex-direction: column;
-        padding: 1.5vh 2vw;
-        gap: 1.5vh
+        padding: 1.5vh 4vh 1.5vh 1.5vh;
+        position: relative;
       }
 
-      .wiheader_left,
-      .wiheader_right {
+      .wiheader_left {
+        justify-content: space-between;
         width: 100%;
-        flex-direction: column;
-        gap: 1.5vh
       }
 
       .wilogo {
         font-size: var(--fz_m4)
+      }
+
+      .winav:is(.dpf) {
+        display: none;
       }
 
       .winav {
@@ -530,15 +536,14 @@
         gap: 1vh
       }
 
-      .winav_item {
-        width: 100%;
-        justify-content: center;
-        padding: 1.2vh 2vw
+      .menu {
+        display: flex;
       }
 
-      .wiheader_right {
-        width: 100%;
-        justify-content: center
+      .winav_item {
+        width: auto;
+        justify-content: center;
+        padding: 1.2vh 2vw
       }
 
       #wimain {
@@ -556,10 +561,10 @@
   <div class="wicontainer">
     <header class="wiheader">
       <div class="wiheader_left">
-        <h1 class="wilogo"><a href="/"><i class="fas fa-eye"></i> </a></h1>
-        <nav class="winav">
+        <h1 class="wilogo"><a href="/"><i class="fas fa-heart"></i> Eye Love</a></h1>
+        <nav class="winav dpf">
           <a href="/" class="winav_item active" data-page="inicio">
-            <i class="fas fa-house"></i> <span>Inicio</span>
+            <i class="fas fa-home"></i> <span>Inicio</span>
           </a>
           <a href="/prevencion" class="winav_item" data-page="prevencion">
             <i class="fas fa-shield-heart"></i> <span>Prevención</span>
@@ -582,13 +587,16 @@
           <a href="/lentes" class="winav_item" data-page="lentes">
             <i class="fas fa-glasses"></i> <span>Lentes</span>
           </a>
-          <a href="/curiosidades" class="winav_item" data-page="curiosidades">
-            <i class="fas fa-lightbulb"></i> <span>Curiosidades</span>
+          <a href="/alimentos" class="winav_item" data-page="alimentos">
+            <i class="fas fa-hamburger"></i> <span>Alimentos</span>
           </a>
           <a href="/acerca" class="winav_item" data-page="acerca">
             <i class="fas fa-info-circle"></i> <span>Acerca</span>
           </a>
         </nav>
+        <div class="menu dpn">
+          <i class="fas fa-bars"></i>
+        </div>
       </div><!-- LADO IZQUIERDO: Logo + Navegación -->
       <div class="wiheader_right">
         <div id="wiTema">
@@ -620,6 +628,7 @@
     };
     c ? load() : e.forEach(v => addEventListener(v, load, { passive: !0, once: !0 }))
   })();
+  document.querySelector('.menu').onclick = () => document.querySelector('.winav').classList.toggle('dpf');
 </script>
 
 </html>
