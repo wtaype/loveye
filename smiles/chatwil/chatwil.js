@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { version } from '../wii.js';
 import * as brain from './brain.js';
 import * as memoria from './memoria.js';
+import * as salud from './head/salud.js';
 
 export const render = () => `
 <div class="miia">
@@ -19,17 +20,17 @@ export const render = () => `
         Háblame con confianza, estoy aquí para cuidar tu visión.
       </p>
       <div class="miia_suggestions">
-        <div class="suggestion_card" data-prompt="Tengo los ojos secos, ¿qué puedo hacer?">
-          <i class="fas fa-droplet"></i><span>Ojo seco</span>
+        <div class="suggestion_card" data-prompt="¿Cómo estás, amigo?">
+          <i class="fas fa-heart"></i><span>¿Cómo estás, amigo?</span>
         </div>
-        <div class="suggestion_card" data-prompt="¿Cómo proteger mis ojos de las pantallas?">
-          <i class="fas fa-desktop"></i><span>Fatiga visual</span>
+        <div class="suggestion_card" data-prompt="Tengo ojo seco, ¿qué hago amigo?">
+          <i class="fas fa-droplet"></i><span>Tengo ojo seco</span>
         </div>
-        <div class="suggestion_card" data-prompt="¿Qué alimentos son buenos para mis ojos?">
-          <i class="fas fa-apple-whole"></i><span>Nutrición</span>
+        <div class="suggestion_card" data-prompt="Ora por mi sanación">
+          <i class="fas fa-hands-praying"></i><span>Ora por mi sanación</span>
         </div>
-        <div class="suggestion_card" data-prompt="¿Cada cuánto debo ir al oftalmólogo?">
-          <i class="fas fa-user-doctor"></i><span>Revisiones</span>
+        <div class="suggestion_card" data-prompt="Alimentos para mi vista">
+          <i class="fas fa-apple-whole"></i><span>Alimentos para mi vista</span>
         </div>
       </div>
     </div>
@@ -164,12 +165,33 @@ const enviarMsg = async () => {
     const res = await brain.procesar(msg);
     mostrarEscribiendo(false);
     if (!res || typeof res !== 'string') throw new Error('Respuesta inválida');
-    escribirTexto(res, () => escribiendo = false);
+    escribirTexto(res, () => {
+      escribiendo = false;
+      actualizarSiguientePregunta(msg, res); // 🆕 Actualizar siguiente pregunta según contexto
+    });
   } catch (err) {
     console.error('❌ Error:', err);
     mostrarEscribiendo(false);
     agregarMsg('😔 Disculpa, tuve un problema. Por favor, intenta de nuevo. 💚', 'ai');
     escribiendo = false;
+  }
+};
+
+const actualizarSiguientePregunta = (pregunta) => {
+  const { $inp } = obtenerEl();
+  
+  const tema = salud.detectarTema(pregunta);
+  if (tema) memoria.setTemaActual(tema);
+  
+  const siguientePregunta = salud.getSiguientePregunta();
+  if (siguientePregunta) {
+    memoria.incrementarContador();
+    $inp.val(siguientePregunta);
+    $inp.trigger('input');
+  } else {
+    memoria.resetearConversacion();
+    $inp.val('');
+    $inp.attr('placeholder', 'Pregúntame sobre salud ocular... 👁️💚');
   }
 };
 

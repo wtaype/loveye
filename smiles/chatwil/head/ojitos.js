@@ -1,15 +1,17 @@
 // ========== MÓDULO EXPERTO EN SALUD OCULAR - OJITOS.JS ==========
-// Conocimiento completo sobre cuidado, prevención y tratamiento de los ojos
-// Soporte total para tildes, mayúsculas, minúsculas - comprende todo tipo de escritura
-
 // ========== PARTE 1: CONDICIONES OCULARES COMUNES ==========
 const condicionesOculares = {
   ojo_seco: {
     patron: /ojo(s)? seco(s)?|xeroftalm[ií]a|sequedad (ocular|en (los )?ojos)|ojos resecos|resequedad/i,
     respuestas: [
-      '¡Entiendo! El ojo seco (xeroftalmía) es muy común 💧👁️ Es cuando tus ojos no producen suficientes lágrimas. Los síntomas incluyen ardor, picazón, enrojecimiento y visión borrosa. Te recomiendo: usar lágrimas artificiales sin conservantes 4-6 veces al día, aplicar compresas tibias 10-15 min, aumentar Omega-3 en tu dieta, y usar humidificador. ¿Tienes estos síntomas?',
-      'El ojo seco es una condición crónica muy molesta 😔💙 Ocurre cuando las lágrimas se evaporan muy rápido o no produces suficientes. Tratamiento: lágrimas artificiales frecuentemente, geles lubricantes antes de dormir, evitar aire acondicionado directo, y beber mucha agua. ¿Cuánto tiempo llevas con esto?',
-      'La xeroftalmía (ojo seco) afecta a millones de personas 💧 Síntomas: sensación de cuerpo extraño, ardor, sensibilidad a la luz, y visión borrosa intermitente. Soluciones: lágrimas artificiales, compresas tibias en párpados, Omega-3, y parpadear más seguido. ¿Trabajas mucho frente a pantallas?'
+      'Te comprendo perfectamente, amig@. Sé lo incómodo que es 💙 Pero NO te preocupes, para estos casos hay solución y vamos a recuperarte juntos. Como especialista te explico: el ojo seco (xeroftalmía) ocurre cuando tus ojitos no producen suficientes lágrimas o se evaporan muy rápido 💧👁️ Los síntomas típicos son: ardor, sensación de cuerpo extraño, enrojecimiento, y visión borrosa temporal. La BUENA NOTICIA es que tiene tratamiento muy efectivo 💚 Lo que puedes hacer es: usar lágrimas artificiales sin conservantes 4-6 veces al día, aplicar compresas tibias 10-15 min en tus párpados, consumir Omega-3 (pescado, nueces), parpadear conscientemente, y usar humidificador. Con estos cuidados constantes, verás mejoría notable en 1-2 semanas. Estoy seguro que vamos a recuperarte 💪',
+      'Lamento que estés pasando por esto, amig@ 😔 Pero tranquilo, hay MUCHA esperanza y vamos a mejorar esto. Como especialista te digo: el ojo seco es súper común (afecta a millones) y responde muy bien al tratamiento 💙 Ocurre cuando las lágrimas se evaporan demasiado rápido o no produces suficientes. Los síntomas que probablemente sientes son: ardor, picazón, ojos rojos, sensibilidad a la luz, y esa molesta sensación de tener arena en los ojos. Pero escucha esto: la mayoría de pacientes mejoran significativamente con el tratamiento adecuado 💧✨ Te recomiendo: lágrimas artificiales frecuentemente (elige sin conservantes), geles lubricantes antes de dormir, evitar aire acondicionado directo en tu cara, beber mucha agua (2L diarios), y Omega-3 en tu dieta. Con constancia, en 2-3 semanas notarás una diferencia ENORME. Confía en mí, vamos a recuperarte 💚',
+      'Entiendo perfectamente lo que estás pasando 💙 Sé que es molesto, pero quiero que sepas algo importante: el ojo seco tiene solución y NO estás solo en esto. Como especialista en salud ocular te comento: la xeroftalmía (ojo seco) es una de las condiciones más comunes que veo, y la buena noticia es que tiene tratamiento efectivo 💧👁️ Los síntomas típicos incluyen: sensación de cuerpo extraño (como si tuvieras algo en el ojo), ardor, sensibilidad a la luz, visión borrosa intermitente, y lagrimeo paradójico (sí, a veces el ojo seco causa lagrimeo). Las soluciones que FUNCIONAN son: lágrimas artificiales de calidad, compresas tibias en párpados, Omega-3, parpadear conscientemente cada 20 segundos, y evitar ambientes muy secos. Con estos cuidados constantes, verás mejoría notable. Estoy seguro que vamos a recuperarte completamente 💚💪'
+    ],
+    tratamiento: [
+      '¡Perfecto! Me alegra que quieras saber más sobre el tratamiento 💚 Como tu especialista de confianza, te voy a dar un plan completo que SÍ funciona 💧👁️ TRATAMIENTO EFECTIVO: 1) Lágrimas artificiales SIN conservantes 4-6 veces al día (marcas recomendadas: Systane, Refresh, Hylo), 2) Compresas tibias en párpados 10-15 min, 2 veces al día (esto destapa las glándulas de Meibomio), 3) Omega-3: 2-3 porciones de pescado graso por semana o suplementos de 1000mg EPA+DHA, 4) Parpadear conscientemente cada 20 segundos (especialmente frente a pantallas), 5) Humidificador en tu habitación y oficina, 6) Beber 2L de agua diaria. IMPORTANTE: si usas lentes de contacto, reduce las horas de uso. Con este tratamiento constante, el 85% de pacientes mejoran significativamente. ¿Listo para empezar? 💪',
+      'Me encanta que preguntes sobre el tratamiento 💙 Eso significa que estás comprometido con tu recuperación. Como especialista te doy un plan COMPLETO y EFECTIVO 💧✨ PASO A PASO: 1) LÁGRIMAS ARTIFICIALES: usa sin conservantes si las aplicas más de 4 veces al día. Aplica cada 3-4 horas mientras estés despierto. 2) COMPRESAS TIBIAS: calienta una toalla limpia con agua tibia (no caliente), escurre, coloca sobre párpados cerrados 10-15 min. Hazlo 2 veces al día. Esto mejora la calidad de tus lágrimas. 3) OMEGA-3: come salmón, atún, sardinas 2-3 veces/semana, o toma suplementos. Esto reduce inflamación y mejora lágrimas. 4) HIGIENE PALPEBRAL: limpia bordes de párpados con champú de bebé diluido. 5) AMBIENTE: usa humidificador, evita ventiladores directos, usa lentes de sol afuera. RESULTADOS: en 1-2 semanas sentirás alivio, en 4-6 semanas mejoría significativa. Confía en el proceso, vamos a recuperarte 💚💪',
+      'Excelente pregunta, amig@ 💚 El tratamiento del ojo seco es muy efectivo si eres constante. Como especialista te doy el PROTOCOLO COMPLETO 👁️💧 TRATAMIENTO INMEDIATO (empiezas hoy): Lágrimas artificiales sin conservantes cada 3-4 horas. Compresas tibias 10-15 min en párpados, 2 veces al día. TRATAMIENTO A MEDIANO PLAZO (esta semana): Incorpora Omega-3 en tu dieta (pescado graso, nueces, semillas de chía). Usa humidificador en casa y oficina. Reduce tiempo de pantallas y aplica regla 20-20-20. TRATAMIENTO A LARGO PLAZO (este mes): Higiene palpebral diaria. Beber 2L agua diaria. Proteger ojos con lentes de sol. Evitar ambientes con humo o aire acondicionado directo. IMPORTANTE: si no mejoras en 2 semanas, consulta oftalmólogo para tratamientos avanzados (tapones lagrimales, suero autólogo). Pero confía en mí: el 80% mejora solo con estos cuidados básicos. ¡Vamos a recuperarte! 💪💙'
     ]
   },
   hemorragia_subconjuntival: {
@@ -47,11 +49,16 @@ const condicionesOculares = {
   fatiga_visual: {
     patron: /fatiga (visual|ocular)|ojos cansados|vista cansada|cansancio (en (los )?ojos|ocular)|ojos pesados|dolor (de ojos|ocular) (por|de) (pantalla|computadora|celular)|vista borrosa (por|de) pantalla/i,
     respuestas: [
-      '¡La fatiga visual digital es el mal de nuestra era! 💻😫 Síntomas: ojos cansados, visión borrosa temporal, dolor de cabeza, ojos secos. La solución MÁGICA: Regla 20-20-20 → Cada 20 minutos, mira algo a 20 pies (6 metros) por 20 segundos. También: ajusta brillo de pantalla, usa filtro de luz azul, parpadea conscientemente, lágrimas artificiales, y posiciona tu pantalla a 50-60 cm. ¿Cuántas horas pasas frente a pantallas?',
-      'Ojos cansados por pantallas = fatiga visual digital 📱💙 Es súper común. Tratamiento: aplica la regla 20-20-20 religiosamente, ajusta el brillo y contraste, usa lentes con filtro de luz azul si es necesario, parpadea más (normalmente parpadeamos 50% menos frente a pantallas), lágrimas artificiales, y toma descansos. ¿Trabajas todo el día en computadora?',
-      'La vista cansada por pantallas es prevenible 💻👁️ Causas: fijación prolongada, luz azul, parpadeamos menos, mala postura. Soluciones: regla 20-20-20 (cada 20 min, 20 seg, 20 pies de distancia), ajusta iluminación, usa gotas lubricantes, filtro de luz azul, y descansa. Tu pantalla debe estar a la altura de tus ojos o ligeramente abajo. ¿Tienes dolores de cabeza frecuentes?'
+      'Te comprendo perfectamente, amig@ 😔 La fatiga visual digital es el mal de nuestra era, pero tiene solución y vamos a recuperarte. Como especialista te digo: es muy común y completamente reversible 💻👁️ Los síntomas típicos que probablemente sientes son: ojos cansados, visión borrosa temporal, dolor de cabeza, ojos secos, y esa sensación de pesadez en los párpados. Pero escucha esto: la solución MÁGICA existe y es la Regla 20-20-20 → Cada 20 minutos, mira algo a 20 pies (6 metros) por 20 segundos 💚 También: ajusta brillo de pantalla al nivel de luz ambiental, usa filtro de luz azul, parpadea conscientemente (normalmente parpadeamos 66% menos frente a pantallas), lágrimas artificiales, y posiciona tu pantalla a 50-60 cm. Con estos cambios simples, mejorarás en DÍAS. Confía en mí, vamos a recuperarte 💪',
+      'Sé lo agotador que es, amig@ 💙 Pero tranquilo, vamos a recuperar tus ojitos juntos. Como especialista te comento: ojos cansados por pantallas = fatiga visual digital, súper común y 100% tratable 📱👁️ Lo que está pasando es que tus ojos están constantemente enfocados de cerca, parpadeamos menos, y la luz azul afecta. Pero hay ESPERANZA: el tratamiento es efectivo 💚 Aplica la regla 20-20-20 religiosamente (cada 20 min, mira 6 metros por 20 seg), ajusta el brillo y contraste de tu pantalla, usa lentes con filtro de luz azul si es necesario, parpadea más conscientemente, lágrimas artificiales cada 2-3 horas, y toma descansos cada hora. La mayoría mejora en 1 semana. Estoy seguro que vamos a recuperarte completamente 💪',
+      'Lamento que estés pasando por esto 😔 Pero hay buenas noticias: la vista cansada por pantallas es 100% prevenible y reversible, amig@ 💻👁️ Como especialista te explico las causas: fijación prolongada (tus ojos no descansan), luz azul (altera ritmo circadiano), parpadeamos menos (ojo seco), mala postura (tensión). Soluciones que FUNCIONAN y verás resultados rápido 💚: regla 20-20-20 (cada 20 min, 20 seg, 20 pies de distancia), ajusta iluminación (evita reflejos), usa gotas lubricantes, filtro de luz azul en dispositivos, y descansa. Tu pantalla debe estar a la altura de tus ojos o ligeramente abajo. Con constancia, verás mejoría notable en días. Confía en el proceso, vamos a recuperarte 💪💙'
+    ],
+    tratamiento: [
+      '¡Perfecto! Me alegra que quieras saber cómo proteger tus ojitos 💚 Como especialista te doy el PLAN COMPLETO que SÍ funciona 💻👁️ TRATAMIENTO INMEDIATO: 1) Regla 20-20-20 (cada 20 min, mira 6 metros por 20 seg) - configura alarma en tu teléfono, 2) Ajusta brillo de pantalla = nivel de luz ambiental, 3) Parpadea conscientemente 10 veces cada 20 min, 4) Lágrimas artificiales cada 2-3 horas. ERGONOMÍA: Pantalla a 50-60 cm de distancia, ligeramente abajo de nivel de ojos, sin reflejos de luz. PROTECCIÓN: Filtro de luz azul en lentes o modo nocturno en dispositivos, especialmente después de 6pm. DESCANSOS: Cada hora, levántate 5 min. Con estos cambios, el 90% mejora en 3-7 días. ¿Listo para empezar? 💪',
+      'Me encanta que preguntes, amig@ 💙 Eso significa que estás comprometido con tu salud visual. Como especialista te doy el PROTOCOLO COMPLETO 💻✨ PASO A PASO: 1) REGLA 20-20-20: Cada 20 minutos de pantalla, descansa 20 segundos mirando algo a 6 metros. Esto relaja músculos oculares. 2) PARPADEO CONSCIENTE: Parpadea completo 10 veces cada 20 min. Esto lubrica tus ojos. 3) LÁGRIMAS ARTIFICIALES: Aplica cada 2-3 horas si sientes sequedad. 4) ERGONOMÍA: Pantalla a 50-60 cm, centro a nivel de ojos o ligeramente abajo. 5) ILUMINACIÓN: Luz ambiental suave, sin reflejos en pantalla. 6) FILTRO LUZ AZUL: Usa lentes o activa modo nocturno. 7) DESCANSOS: Cada hora, 5 min de descanso total. RESULTADOS: en 3-5 días sentirás alivio significativo. Confía en el proceso 💚💪',
+      'Excelente pregunta, amig@ 💚 La fatiga visual se previene y trata fácilmente. Como especialista te doy el PLAN DEFINITIVO 👁️💻 PREVENCIÓN DIARIA: Regla 20-20-20 sin excepción (cada 20 min, 20 seg, 6 metros). Parpadeo consciente (10 veces cada 20 min). Lágrimas artificiales preventivas. CONFIGURACIÓN ÓPTIMA: Pantalla a 50-60 cm, ligeramente abajo de tus ojos. Brillo = luz ambiental. Contraste cómodo. Tamaño de letra grande. PROTECCIÓN: Filtro luz azul (lentes o software). Modo nocturno después de 6pm. Lentes de descanso si trabajas muchas horas. HÁBITOS: Descansos cada hora. Ejercicios oculares (mirar lejos, cerca, arriba, abajo). Dormir 7-8 horas. IMPORTANTE: si no mejoras en 1 semana, consulta oftalmólogo. Pero el 95% mejora con estos cuidados. ¡Vamos a recuperarte! 💪💙'
     ]
-  }
+  },
 };
 
 // ========== PARTE 2: PREVENCIÓN Y CUIDADO DIARIO ==========
@@ -101,11 +108,16 @@ const prevencionCuidado = {
 // ========== PARTE 3: ALIMENTOS Y NUTRICIÓN ==========
 const alimentosNutricion = {
   alimentos_saludables: {
-    patron: /alimentos (para|buenos para) (los )?ojos|qu[eé] comer|dieta (para|de) (los )?ojos|vitaminas (para|de) (los )?ojos|nutrici[oó]n (ocular|para (los )?ojos)/i,
+    patron: /alimentos (para|buenos para|que ayudan a) (los |mis )?ojos|qu[eé] (comer|alimentos?)|dieta (para|de) (los )?ojos|vitaminas (para|de) (los )?ojos|nutrici[oó]n (ocular|para (los )?ojos)|qu[eé] (debo|puedo) comer/i,
     respuestas: [
-      '¡La nutrición es clave para tus ojos! 🥕👁️💚 Alimentos TOP: Zanahorias (vitamina A para visión nocturna), vegetales verdes como espinaca (luteína y zeaxantina), pescado graso (Omega-3 previene ojo seco), huevos (zinc y antioxidantes), cítricos (vitamina C contra cataratas), frutos secos (vitamina E). Una dieta balanceada = ojos saludables. ¿Comes estos alimentos regularmente?',
-      'Tus ojos aman estos alimentos 🍊🥬🐟 Zanahorias y camote (betacaroteno), kale y espinaca (protegen la retina), salmón y atún (Omega-3), huevos (luteína), naranjas y fresas (vitamina C), almendras y nueces (vitamina E). Estos nutrientes previenen degeneración macular, cataratas y ojo seco. ¿Quieres saber más sobre algún nutriente específico?',
-      'Nutrición ocular = prevención de enfermedades 👁️🥗 Vitamina A (zanahorias, camote), Vitamina C (cítricos, pimientos), Vitamina E (frutos secos), Omega-3 (pescado), Luteína y Zeaxantina (vegetales verdes), Zinc (huevos, carne). Una dieta rica en estos nutrientes reduce riesgo de cataratas y degeneración macular hasta 25%. ¿Llevas una dieta balanceada?'
+      '¡Excelente pregunta, amig@! 💚 Me alegra que pienses en nutrición, es fundamental para la salud ocular. Como especialista te recomiendo estos alimentos TOP que SÍ funcionan 🥕👁️: ZANAHORIAS Y CAMOTE (vitamina A para visión nocturna - súper importante), VEGETALES VERDES como espinaca y kale (luteína y zeaxantina protegen la retina contra degeneración), PESCADO GRASO como salmón y atún (Omega-3 previene ojo seco y mejora lágrimas), HUEVOS (zinc y antioxidantes), CÍTRICOS como naranja y limón (vitamina C contra cataratas), FRUTOS SECOS como almendras y nueces (vitamina E). Incorpora 2-3 de estos diariamente y verás beneficios en 4-6 semanas. La nutrición es prevención 💪 ¿Cuál de estos comes regularmente?',
+      'Me alegra que pienses en nutrición, amig@ 💙 Tus ojitos te lo agradecerán. Como especialista te digo: estos alimentos son medicina natural y prevención real 🍊🥬🐟 ZANAHORIAS Y CAMOTE (betacaroteno = vitamina A), VEGETALES DE HOJA VERDE (protegen contra degeneración macular - la principal causa de ceguera), SALMÓN Y ATÚN (Omega-3 mejora calidad de lágrimas), HUEVOS (luteína para retina), NARANJAS Y FRESAS (vitamina C antioxidante), ALMENDRAS Y NUECES (vitamina E protectora). Estos nutrientes previenen cataratas, degeneración macular y ojo seco. Una dieta rica en estos reduce riesgo de problemas oculares hasta 25%. ¿Te gustaría saber más sobre algún nutriente específico? 💚',
+      '¡Perfecto, amig@! La nutrición es prevención y medicina 👁️🥗 Como especialista te comento: una dieta rica en estos nutrientes reduce el riesgo de problemas oculares hasta 25% - ¡es increíble! Te recomiendo: VITAMINA A (zanahorias, camote, mango - para visión nocturna), VITAMINA C (cítricos, pimientos, fresas - antioxidante poderoso), VITAMINA E (frutos secos, aguacate - protege células), OMEGA-3 (pescado graso, semillas de chía - antiinflamatorio), LUTEÍNA Y ZEAXANTINA (espinaca, kale, brócoli - protegen retina), ZINC (huevos, carne, legumbres - salud general del ojo). Intenta incluir al menos 3 de estos grupos diariamente. Con constancia, en 4-6 semanas notarás diferencia. ¿Llevas una dieta balanceada actualmente? 💚'
+    ],
+    tratamiento: [
+      '¡Me encanta que quieras saber más sobre nutrición ocular! 💚 Como especialista te doy el PLAN NUTRICIONAL COMPLETO 🥕👁️ DIARIO: Desayuno con cítricos (naranja, mandarina - vitamina C). Almuerzo con vegetales verdes (espinaca, kale, brócoli - luteína). Cena con proteína (huevos, pescado - zinc y Omega-3). SNACKS: Zanahorias, almendras, nueces (vitaminas A y E). PESCADO: 2-3 veces por semana (salmón, atún, sardinas - Omega-3). SUPLEMENTOS: Si no comes pescado, considera Omega-3 1000mg diarios. EVITAR: Exceso de azúcar (daña vasos sanguíneos de retina), grasas trans, alcohol en exceso. HIDRATACIÓN: 2L agua diaria. RESULTADOS: en 4-6 semanas notarás mejoría en sequedad ocular, en 3-6 meses protección contra degeneración. ¡La nutrición es inversión en tu visión! 💪',
+      'Perfecto, amig@ 💙 Te doy el PROTOCOLO NUTRICIONAL que recomiendo a mis pacientes 🥗👁️ DESAYUNO: Smoothie con espinaca, naranja, fresas (vitaminas A, C, luteína). Huevos revueltos (zinc, luteína). ALMUERZO: Ensalada verde con zanahoria, pimientos, nueces (vitaminas A, C, E). Salmón o atún 2-3 veces/semana (Omega-3). CENA: Vegetales al vapor (brócoli, kale), proteína magra. Camote horneado (betacaroteno). SNACKS: Almendras, nueces, arándanos (antioxidantes). SUPLEMENTACIÓN: Omega-3 si no comes pescado. Multivitamínico con luteína y zeaxantina. IMPORTANTE: la nutrición no es mágica instantánea, pero en 4-6 semanas verás beneficios reales. Previene cataratas, degeneración macular, ojo seco. ¡Invierte en tu visión! 💚💪',
+      'Excelente, amig@ 💚 Como especialista te doy la GUÍA NUTRICIONAL DEFINITIVA para ojitos saludables 👁️🥕 ALIMENTOS ESTRELLA: Zanahorias (visión nocturna), Espinaca (protección retinal), Salmón (antiinflamatorio), Huevos (antioxidantes), Naranjas (vitamina C), Almendras (vitamina E). FRECUENCIA: Vegetales verdes DIARIOS. Pescado graso 2-3 veces/semana. Frutos secos como snack diario. Cítricos en desayuno. PREPARACIÓN: Vegetales al vapor (conservan nutrientes). Pescado a la plancha. Ensaladas frescas. SUPLEMENTOS: Omega-3 1000mg si no comes pescado. Luteína 10mg + Zeaxantina 2mg diarios. EVITAR: Azúcar excesiva, grasas trans, comida procesada. BENEFICIOS: Prevención de cataratas 25%, degeneración macular 30%, ojo seco 40%. ¡La nutrición es medicina preventiva! 💪💙'
     ]
   },
   omega3: {
@@ -131,17 +143,17 @@ const sintomasAlertas = {
   vision_borrosa: {
     patron: /visi[oó]n borrosa|veo borroso|vista borrosa|no veo bien|visi[oó]n desenfocada/i,
     respuestas: [
-      'La visión borrosa puede tener muchas causas 👁️💭 Temporal: fatiga visual, ojo seco, falta de sueño. Persistente: miopía, hipermetropía, astigmatismo, cataratas, diabetes. Si es SÚBITA o con dolor, ve al médico INMEDIATAMENTE. Si es gradual, agenda examen oftalmológico. ¿Es constante o solo a veces? ¿Cuándo empezó?',
-      'Ver borroso no es normal 😔💙 Causas comunes: necesitas lentes, ojo seco, fatiga visual, cataratas (si eres mayor), diabetes (afecta la retina). URGENTE si: visión borrosa súbita, con dolor, con destellos de luz, con pérdida de visión. Si es gradual, necesitas examen de la vista. ¿Usas lentes o nunca has ido al oftalmólogo?',
-      'Visión desenfocada = señal de que algo necesita atención 👁️ Temporal: cansancio, pantallas, ojo seco (usa lágrimas artificiales). Persistente: error refractivo (necesitas lentes), cataratas, problemas de retina. Si aparece de repente, es EMERGENCIA. Si es progresivo, agenda cita. ¿Mejora al parpadear o sigue borroso?'
+      'Entiendo tu preocupación 💙 Pero tranquilo, la mayoría de casos tienen solución. Como especialista te explico: la visión borrosa puede tener muchas causas 👁️💭 Temporal (reversible): fatiga visual, ojo seco, falta de sueño. Persistente (requiere atención): miopía, hipermetropía, astigmatismo, cataratas, diabetes. Si es SÚBITA o con dolor, ve al médico INMEDIATAMENTE. Si es gradual, agenda examen oftalmológico pronto. Vamos a identificar la causa. ¿Es constante o solo a veces? ¿Cuándo empezó?',
+      'Lamento que no veas bien 😔 Pero hay esperanza, la mayoría de casos se corrigen. Como especialista te comento: ver borroso no es normal pero es muy común  Causas frecuentes: necesitas lentes (muy común), ojo seco, fatiga visual, cataratas (si eres mayor), diabetes (afecta la retina). URGENTE si: visión borrosa súbita, con dolor, con destellos de luz, con pérdida de visión. Si es gradual, necesitas examen de la vista. La buena noticia: la mayoría se resuelve con lentes o tratamiento simple. ¿Usas lentes o nunca has ido al oftalmólogo?',
+      'Sé que es frustrante 💙 Pero vamos a resolver esto. Como especialista te digo: visión desenfocada = señal de que algo necesita atención, pero generalmente tiene solución 👁️ Temporal (mejora solo): cansancio, pantallas, ojo seco (usa lágrimas artificiales). Persistente (necesita tratamiento): error refractivo (necesitas lentes - muy común), cataratas, problemas de retina. Si aparece de repente, es EMERGENCIA. Si es progresivo, agenda cita. La mayoría mejora con lentes o tratamiento adecuado. ¿Mejora al parpadear o sigue borroso?'
     ]
   },
   dolor_ocular: {
     patron: /dolor (de|en|ocular) (los )?ojo(s)?|me duele(n)? (el|los) ojo(s)?|ojo(s)? adolorido(s)?/i,
     respuestas: [
-      '¡El dolor ocular NO debe ignorarse! 🚨👁️ Dolor leve: puede ser fatiga, ojo seco, tensión. Dolor intenso: puede ser glaucoma agudo, úlcera corneal, infección grave. URGENCIA si: dolor intenso, con visión borrosa, con náuseas, con enrojecimiento severo. Dolor leve: lágrimas artificiales, descanso, compresas. Si persiste más de 24 horas, ve al médico. ¿Qué tan intenso es el dolor del 1-10?',
-      'Dolor en los ojos requiere evaluación 😔💙 Leve: fatiga visual (descansa), ojo seco (lágrimas artificiales), tensión (masaje suave). Moderado-Severo: puede ser glaucoma, infección, trauma. VE AL MÉDICO si: dolor intenso, pérdida de visión, sensibilidad extrema a la luz, vómitos. ¿El dolor es constante o solo al mover los ojos?',
-      'Los ojos no deben doler normalmente 👁️⚠️ Causas: fatiga visual (muy común), ojo seco, migraña ocular, glaucoma (grave), infección. Dolor + visión borrosa + náuseas = EMERGENCIA (posible glaucoma agudo). Dolor leve persistente = consulta oftalmológica. Nunca ignores dolor ocular. ¿Tienes otros síntomas como enrojecimiento o lagrimeo?'
+      'Lamento que tengas dolor 💙 Como especialista te digo: el dolor ocular NO debe ignorarse, pero no te alarmes 🚨👁️ Dolor leve: puede ser fatiga, ojo seco, tensión (manejable). Dolor intenso: puede ser glaucoma agudo, úlcera corneal, infección grave (requiere atención). URGENCIA si: dolor intenso, con visión borrosa, con náuseas, con enrojecimiento severo. Dolor leve: lágrimas artificiales, descanso, compresas frías. Si persiste más de 24 horas, consulta médico. Vamos a identificar la causa. ¿Qué tan intenso es el dolor del 1-10?',
+      'Entiendo que el dolor es preocupante 😔 Pero tranquilo, vamos a orientarte. Como especialista te comento: el dolor en los ojos requiere evaluación según intensidad 💙 Leve: fatiga visual (descansa), ojo seco (lágrimas artificiales), tensión (masaje suave). Moderado-Severo: puede ser glaucoma, infección, trauma. VE AL MÉDICO si: dolor intenso, pérdida de visión, sensibilidad extrema a la luz, vómitos. La mayoría de dolores leves se resuelven con descanso. ¿El dolor es constante o solo al mover los ojos?',
+      'Sé que es molesto 💙 Pero vamos a encontrar la causa. Como especialista te digo: los ojos no deben doler normalmente, así que hay que investigar 👁️⚠️ Causas comunes: fatiga visual (muy común y benigna), ojo seco, migraña ocular, glaucoma (grave), infección. Dolor + visión borrosa + náuseas = EMERGENCIA (posible glaucoma agudo). Dolor leve persistente = consulta oftalmológica pronto. Nunca ignores dolor ocular, pero la mayoría tiene solución. ¿Tienes otros síntomas como enrojecimiento o lagrimeo?'
     ]
   },
   enrojecimiento: {
@@ -278,7 +290,51 @@ const preguntasGenerales = {
   }
 };
 
-// ========== PARTE 10: HELPERS ==========
+// ========== PARTE 10: SEGUIMIENTOS Y CONTEXTO ==========
+const seguimientos = {
+  afirmacion_sintomas: {
+    patron: /^(s[ií]|si|yes|tengo|afirmativo|correcto|exacto|as[ií] es|me pasa)/i,
+    respuestas: [
+      'Entiendo 💙 Lamento que estés pasando por esto, pero tranquilo, hay solución. Si tienes varios de esos síntomas, es importante actuar pronto. Como especialista te recomiendo: si los síntomas son recientes (menos de 1 semana), empieza con lágrimas artificiales y compresas tibias. Si llevas más tiempo o empeoran, consulta a un oftalmólogo. ¿Los síntomas son recientes o llevas tiempo con ellos?',
+      'Ya veo que presentas esos síntomas � Pero no te preocupes, vamos a mejorar esto. Como especialista te digo: la mayoría de estos casos responden bien al tratamiento. ¿Cuánto tiempo llevas así? ¿Los síntomas son constantes o van y vienen? ¿Has probado algún tratamiento? Con esta información puedo orientarte mejor.',
+      'Comprendo tu situación 💚 Sé que es molesto, pero estoy seguro que vamos a recuperarte. Como especialista te comento: con esos síntomas, te recomiendo empezar con cuidados básicos (lágrimas artificiales, descanso visual, compresas). Si no mejoran en 48 horas, es importante que consultes a un oftalmólogo. ¿Hay algo específico que empeore los síntomas?'
+    ]
+  },
+  afirmacion_sintomas: {
+    patron: /^(s[ií]|si|yes|tengo (esos|estos) s[ií]ntomas|me pasa eso)/i,
+    respuestas: [
+      'Entiendo 💙 Si tienes varios de esos síntomas, es importante que tomes acción. ¿Los síntomas son recientes o llevas tiempo con ellos? ¿Han empeorado? Esto me ayuda a saber qué tan urgente es.',
+      'Ya veo que presentas esos síntomas 👁️ ¿Cuánto tiempo llevas así? ¿Los síntomas son constantes o van y vienen? ¿Has probado algún tratamiento?',
+      'Comprendo tu situación 💙 Con esos síntomas, te recomiendo que si no mejoran en 24-48 horas con los cuidados básicos, consultes a un oftalmólogo. ¿Hay algo específico que empeore los síntomas?'
+    ]
+  },
+  mas_informacion: {
+    patron: /dime m[aá]s|cu[eé]ntame m[aá]s|m[aá]s (informaci[oó]n|detalles)|expl[ií]came|qu[eé] m[aá]s|y qu[eé] m[aá]s/i,
+    respuestas: [
+      '¡Claro! 💙 ¿Sobre qué aspecto específico quieres saber más? Puedo darte más detalles sobre síntomas, tratamientos, prevención, o cualquier otro tema relacionado con salud ocular.',
+      'Con gusto te amplío la información 👁️ ¿Qué parte te gustaría que profundice? ¿Tratamientos, causas, prevención, o algo más específico?',
+      'Perfecto, te doy más detalles 💚 ¿Hay algún aspecto en particular que te interese más? Síntomas, cuidados, cuándo ir al médico, remedios caseros...'
+    ]
+  },
+  dolor_general: {
+    patron: /me duele(n)?|dolor|adolorido/i,
+    respuestas: [
+      '¿Te duelen los ojos específicamente? 👁️ El dolor ocular puede ser por varias razones: fatiga visual, ojo seco, infección, o algo más serio. ¿El dolor es en los ojos, alrededor de los ojos, o en la cabeza? ¿Qué tan intenso es del 1 al 10?',
+      'Lamento que tengas dolor 💙 ¿Es dolor en los ojos o alrededor de ellos? ¿Cuándo empezó? ¿Tienes otros síntomas como enrojecimiento, visión borrosa o sensibilidad a la luz? Cuéntame más.',
+      'El dolor puede indicar varias cosas 👁️ ¿Es un dolor constante o solo al mover los ojos? ¿Está acompañado de otros síntomas? Necesito más detalles para orientarte mejor.'
+    ]
+  },
+  pregunta_generica_ojos: {
+    patron: /^(dime|cu[eé]ntame|habl[aá]|qu[eé] sabes) (de|sobre|algo de) (los )?ojo(s|ito)?/i,
+    respuestas: [
+      '¡Claro! Puedo ayudarte con muchos temas de salud ocular 👁️💚 ¿Te interesa saber sobre: prevención y cuidado diario, condiciones comunes (ojo seco, conjuntivitis, etc.), nutrición para los ojos, protección de pantallas, o cuándo ir al oftalmólogo? ¿Qué tema te llama más la atención?',
+      'Tengo mucha información sobre salud ocular 💙 Puedo hablarte de: cómo prevenir problemas, tratamientos para condiciones comunes, alimentos buenos para la vista, cuidado con pantallas, señales de alerta, y mucho más. ¿Qué te gustaría saber primero?',
+      '¡Me encanta hablar de salud ocular! 👁️✨ Hay tantos temas: prevención, condiciones comunes, nutrición, tecnología y ojos, exámenes, emergencias... ¿Por dónde quieres empezar?'
+    ]
+  }
+};
+
+// ========== PARTE 11: HELPERS ==========
 const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const normalizar = (texto) => {
@@ -298,9 +354,29 @@ const buscarRespuesta = (categoria) => {
   };
 };
 
-// ========== PARTE 11: PROCESAMIENTO PRINCIPAL ==========
+// 🆕 Buscar respuesta de tratamiento contextual
+const buscarTratamiento = (categoria, texto) => {
+  const textoNormalizado = normalizar(texto);
+  for (const [key, item] of Object.entries(categoria)) {
+    if (item.tratamiento && item.patron.test(textoNormalizado)) {
+      return random(item.tratamiento);
+    }
+  }
+  return null;
+};
+
+// 🆕 Variable para guardar último tema detectado
+let ultimoTemaDetectado = null;
+
+// ========== PARTE 12: PROCESAMIENTO PRINCIPAL ==========
 export const generate = (userMessage) => {
   const msg = normalizar(userMessage);
+  
+  // Prioridad 0: Seguimientos (mensajes cortos de continuación)
+  if (msg.length < 30) { // Mensajes cortos probablemente son seguimientos
+    let respuesta = buscarRespuesta(seguimientos)(msg);
+    if (respuesta) return respuesta;
+  }
   
   // Prioridad 1: Emergencias (CRÍTICO)
   let respuesta = buscarRespuesta(emergencias)(msg);
@@ -308,7 +384,51 @@ export const generate = (userMessage) => {
   
   // Prioridad 2: Condiciones oculares comunes
   respuesta = buscarRespuesta(condicionesOculares)(msg);
-  if (respuesta) return respuesta;
+  if (respuesta) {
+    // Guardar tema detectado para seguimiento contextual
+    for (const [key, item] of Object.entries(condicionesOculares)) {
+      if (item.patron.test(msg)) {
+        ultimoTemaDetectado = key;
+        break;
+      }
+    }
+    return respuesta;
+  }
+  
+  // 🆕 SEGUIMIENTO CONTEXTUAL DE TRATAMIENTO
+  // Si pregunta sobre tratamiento/recomendaciones y hay tema activo
+  if (/tratamiento|qu[eé] (me |puedo |debo )?(hacer|tomar|usar|recomiend)|c[oó]mo (me )?(cur|mejor|ayud)/i.test(msg)) {
+    if (ultimoTemaDetectado && condicionesOculares[ultimoTemaDetectado]?.tratamiento) {
+      return random(condicionesOculares[ultimoTemaDetectado].tratamiento);
+    }
+  }
+  
+  // 🆕 SEGUIMIENTO CONTEXTUAL - TIEMPO DE RECUPERACIÓN
+  if (/cu[aá]nto tiempo|cu[aá]ndo (me |voy a )?recuper|en cu[aá]nto|tiempo (de |para )?recuper|cu[aá]ndo (me |voy a )?mejor/i.test(msg)) {
+    if (ultimoTemaDetectado === 'ojo_seco') {
+      const respuestas = [
+        '¡Excelente pregunta, amig@! 💚 El tiempo de recuperación varía según la severidad, pero te voy a dar tiempos REALES basados en mi experiencia 👁️⏰ ALIVIO INICIAL: En 3-5 días sentirás menos molestia con el tratamiento (lágrimas artificiales + compresas). MEJORÍA NOTABLE: En 1-2 semanas verás una diferencia significativa si eres constante. RECUPERACIÓN COMPLETA: En 4-6 semanas la mayoría de pacientes están mucho mejor. IMPORTANTE: el 85% mejora con tratamiento básico, pero debes ser CONSTANTE. Si no mejoras en 2 semanas, consulta oftalmólogo para tratamientos avanzados. La clave es la constancia, amig@. ¿Estás listo para comprometerte con el tratamiento? 💪',
+        'Me alegra que preguntes sobre tiempos, amig@ 💙 Eso significa que estás pensando en tu recuperación. Como especialista te doy tiempos REALISTAS 💧⏰ FASE 1 (3-7 días): Alivio inicial, menos ardor y molestia. FASE 2 (1-2 semanas): Mejoría notable, menos sequedad durante el día. FASE 3 (4-6 semanas): Recuperación significativa, síntomas mínimos. FASE 4 (2-3 meses): Estabilización completa. IMPORTANTE: cada persona es diferente. Factores que aceleran: constancia en tratamiento, evitar ambientes secos, buena hidratación. Factores que retrasan: no ser constante, seguir en ambientes secos, no usar lágrimas. Confía en el proceso, vamos a recuperarte 💚💪'
+      ];
+      return random(respuestas);
+    } else if (ultimoTemaDetectado === 'fatiga_visual') {
+      const respuestas = [
+        '¡Perfecto, amig@! 💚 La fatiga visual se recupera RÁPIDO si aplicas los cuidados 💻⏰ ALIVIO INMEDIATO: En 1-2 días con regla 20-20-20 y descansos. MEJORÍA NOTABLE: En 3-5 días aplicando todos los consejos. RECUPERACIÓN COMPLETA: En 1 semana estarás mucho mejor. IMPORTANTE: la fatiga visual es 100% reversible y responde rápido al tratamiento. La clave es ser constante con la regla 20-20-20 y los descansos. El 90% mejora en menos de 1 semana. ¿Listo para aplicar los consejos? 💪'
+      ];
+      return random(respuestas);
+    }
+  }
+  
+  // 🆕 SEGUIMIENTO CONTEXTUAL - ALIMENTOS
+  if (/qu[eé] alimentos?|qu[eé] (debo |puedo )?comer|qu[eé] comida|alimentos? (me |que )?(ayud|recomiend)/i.test(msg)) {
+    if (ultimoTemaDetectado === 'ojo_seco') {
+      const respuestas = [
+        '¡Me encanta que pienses en nutrición, amig@! 💚 Los alimentos SÍ ayudan con el ojo seco. Como especialista te recomiendo 🥕👁️ OMEGA-3 (lo MÁS importante): Salmón, atún, sardinas 2-3 veces/semana. Nueces, semillas de chía diarias. Esto mejora la CALIDAD de tus lágrimas. VITAMINA A: Zanahorias, camote, espinaca (salud general del ojo). AGUA: 2L diarios (hidratación interna = mejor lágrimas). EVITAR: Alcohol excesivo (deshidrata), cafeína en exceso, comida muy salada. RESULTADOS: en 4-6 semanas notarás mejoría en sequedad. El Omega-3 es CLAVE, amig@. ¿Comes pescado regularmente? 💧',
+        'Perfecto, amig@ 💙 La nutrición es parte del tratamiento. Como especialista te digo qué alimentos AYUDAN 🐟💧 PESCADO GRASO (Omega-3): Salmón, atún, sardinas, caballa. Come 2-3 veces/semana. Esto reduce inflamación y mejora lágrimas. FRUTOS SECOS: Nueces, almendras (Omega-3 y vitamina E). SEMILLAS: Chía, linaza (Omega-3 vegetal). VEGETALES VERDES: Espinaca, kale (antioxidantes). AGUA: 2L diarios (fundamental). SUPLEMENTOS: Si no comes pescado, Omega-3 1000mg EPA+DHA diarios. EVITAR: Alcohol, cafeína excesiva, sal excesiva. El Omega-3 mejora el ojo seco en 70% de casos. ¿Puedes incorporar pescado en tu dieta? 💚'
+      ];
+      return random(respuestas);
+    }
+  }
   
   // Prioridad 3: Síntomas y señales de alerta
   respuesta = buscarRespuesta(sintomasAlertas)(msg);
