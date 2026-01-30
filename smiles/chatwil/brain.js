@@ -3,9 +3,10 @@ import * as ojitos from './head/ojitos.js';
 import * as salud from './head/salud.js';
 import * as amabilidad from './head/amabilidad.js';
 import * as hope from './head/hope.js';
+import * as estados from './head/estados.js';
 import * as etica from './head/etica.js';
 
-const modulos = [amabilidad, hope, ojitos, salud, etica];
+const modulos = [amabilidad, hope, estados, ojitos, salud, etica];
 
 export const procesar = async (mensaje) => {
   memoria.add('user', mensaje);
