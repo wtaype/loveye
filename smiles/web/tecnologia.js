@@ -201,7 +201,7 @@ export const render = () => `
         </p>
       </div>
       <div class="tech_hero_visual">
-        <img src="${import.meta.env.BASE_URL}tecnologia.png" alt="Tecnología Oftalmológica" class="tech_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}tecnologia.jpg" alt="Tecnología Oftalmológica" class="tech_hero_img" loading="lazy">
       </div>
     </section>
 

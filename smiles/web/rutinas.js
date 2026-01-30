@@ -208,7 +208,7 @@ export const render = () => `
         </p>
       </div>
       <div class="rut_hero_visual">
-        <img src="${import.meta.env.BASE_URL}rutinas.png" alt="Rutinas Visuales" class="rut_hero_img" loading="lazy">
+        <img src="${import.meta.env.BASE_URL}rutinas.avif" alt="Rutinas Visuales" class="rut_hero_img" loading="lazy">
       </div>
     </section>
 
