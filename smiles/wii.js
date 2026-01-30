@@ -15,5 +15,5 @@ git add . ; git commit -m "Actualizacion Principal v12.10.10" ; git push origin 
 
 // En caso de emergencia, para actualizar el Tag existente. (3)
 git tag -d v12 ; git tag v12 -m "Version v12 actualizada" ; git push origin v12 --force
- ACTUALIZACION TAG[END]  */ 
+ ACTUALIZACION TAG[END] */ 
 
