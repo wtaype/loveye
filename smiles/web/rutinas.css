@@ -92,7 +92,7 @@
 /* ==================== EJERCICIOS VISUALES ==================== */
 .ejercicios_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
   gap: 3vh;
   margin-bottom: 8vh;
 }
@@ -262,7 +262,7 @@
 
 /* ==================== RUTINA DIARIA ==================== */
 .rutina_section {
-  background: linear-gradient(135deg, var(--mco) 0%, var(--hv) 100%);
+  background: var(--success);
   border-radius: 2vh;
   padding: 6vh 5vw;
   margin-bottom: 8vh;

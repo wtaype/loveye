@@ -237,7 +237,7 @@
 
 /* ==================== FRECUENCIA RECOMENDADA ==================== */
 .frecuencia_section {
-  background: linear-gradient(135deg, var(--mco) 0%, var(--hv) 100%);
+  background: var(--info);
   border-radius: 2vh;
   padding: 6vh 5vw;
   margin-bottom: 8vh;

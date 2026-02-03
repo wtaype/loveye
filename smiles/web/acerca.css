@@ -8,7 +8,7 @@
   text-align: center;
   padding: 8vh 0;
   margin-bottom: 8vh;
-  background: linear-gradient(135deg, var(--mco) 0%, var(--hv) 100%);
+  background: var(--success);
   border-radius: 2vh;
   color: var(--F);
 }
