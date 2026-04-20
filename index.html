@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,10 +13,11 @@
   <meta property="og:url" content="https://loveye.web.app/" />
   <link rel="alternate" hreflang="es" href="https://wtaype.github.io/loveye" />
   <meta name="description"
-  content="Love Eye: Tu guía completa para el cuidado de la visión. Prevención, diagnóstico, tratamiento, nutrición y ejercicios para mantener tus ojos saludables. Información profesional de oftalmología accesible para todos." />
+    content="Love Eye: Tu guía completa para el cuidado de la visión. Prevención, diagnóstico, tratamiento, nutrición y ejercicios para mantener tus ojos saludables. Información profesional de oftalmología accesible para todos." />
   <meta property="og:description"
-  content="Tu guía completa para el cuidado de la visión. Prevención, diagnóstico, tratamiento, nutrición y ejercicios para mantener tus ojos saludables." />
-  <meta property="og:title" content="Love Eye | Cuida tus Ojitos con Amor - Prevención, Diagnóstico y Tratamiento Visual 👁️💙" />
+    content="Tu guía completa para el cuidado de la visión. Prevención, diagnóstico, tratamiento, nutrición y ejercicios para mantener tus ojos saludables." />
+  <meta property="og:title"
+    content="Love Eye | Cuida tus Ojitos con Amor - Prevención, Diagnóstico y Tratamiento Visual 👁️💙" />
   <title>Love Eye | Cuida tus Ojitos con Amor - Prevención, Diagnóstico y Tratamiento Visual 👁️💙</title>
   <style>
     :root {
@@ -612,20 +614,6 @@
   </div>
 </body>
 <script>(() => { const d = document, h = d.documentElement, w = d.querySelector('#wiTema'); if (!w) return; const ts = [...w.querySelectorAll('.tema')], m = d.querySelector('meta[name="theme-color"]') || d.head.appendChild(Object.assign(d.createElement('meta'), { name: 'theme-color' })), st = t => { const [n, c] = t.dataset.ths.split('|'); h.dataset.theme = n; m.content = c; localStorage.wiTema = t.dataset.ths; ts.forEach(x => x.classList.toggle('mtha', x === t)) }; w.addEventListener('click', e => e.target.matches('.tema') && st(e.target), { passive: !0 }); const i = w.querySelector(`[data-ths="${localStorage.wiTema}"]`) || ts[0]; i && st(i) })();</script>
-<script type="module">
-  (() => {
-    const k = 'wiflash', c = localStorage[k], e = ['touchstart', 'scroll', 'click', 'mousemove']; let l = 0; const load = () => {
-      if (l++) return; const h = document.head, css = [
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css',
-        'https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap',
-        'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap',
-        'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap'
-      ]; css.forEach(u => h.appendChild(Object.assign(document.createElement('link'), { rel: 'stylesheet', href: u })));
-      import('./smiles/main.js'); localStorage[k] = 1
-    };
-    c ? load() : e.forEach(v => addEventListener(v, load, { passive: !0, once: !0 }))
-  })();
-  document.querySelector('.menu').onclick = () => document.querySelector('.winav').classList.toggle('dpf');
-</script>
+<script type="module" src="./smiles/main.js" defer></script>
 
 </html>

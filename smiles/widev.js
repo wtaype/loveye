@@ -1,5 +1,19 @@
 import $ from 'jquery'; 
 
+// CARGA INTELIGENTE v15_________________________________
+export const wiSmart = (() => {
+  const ok = new Set(), c = getls('wiSmart'), im = {};
+  const obs = new MutationObserver(() => { for (const s in im) { const e = document.querySelector(s); if (e) e.outerHTML = im[s]; } });
+  const run = o => { Object.entries(o).forEach(([t, v]) => {
+    if (t === 'img') { Object.assign(im, v); obs.observe(document.body, { childList: true, subtree: true }); return; }
+    [].concat(v).forEach(it => { const k = `${t}:${it}`; if (ok.has(k)) return; ok.add(k);
+      t === 'css' ? !$(`link[href="${it}"]`).length && $('<link>', { rel: 'stylesheet', href: it }).appendTo('head')
+        : typeof it === 'function' && it().catch?.(e => console.error('wiSmart:', e));
+    });
+  }); savels('wiSmart', 1); };
+  return o => c ? run(o) : $(document).one('touchstart scroll click mousemove', () => run(o));
+})();
+
 // === 🧠 LOADER SECUENCIAL v14 ===
 export const wiLoad = (() => {
   const carga = new Set(), opt = { rootMargin: '0px 0px -40% 0px', threshold: 0.15 };
