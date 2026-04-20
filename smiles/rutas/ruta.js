@@ -33,7 +33,7 @@ class WiRutas {
       const titulo = `${norm.slice(1).replace(/^(\w)/, c => c.toUpperCase()) || 'Inicio'} - ${app}`;
 
       this.marcarNav(norm); await wiFade(this.main, html);
-
+      
       window.scrollTo(0, 0);
       document.title = titulo; mod.init?.();
       if (historial) wiPath.poner(norm === `/${this.HOME}` ? '/' : norm, titulo);
@@ -47,8 +47,8 @@ class WiRutas {
 
   marcarNav(norm) {
     const pag = norm.slice(1) || this.HOME;
-    $('.winav_item').removeClass('active');
-    $(`.winav_item[data-page="${pag}"]`).addClass('active');
+    $('.nv_item').removeClass('active');
+    $(`.nv_item[data-page="${pag}"]`).addClass('active');
   }
 
   async prefetch(ruta) {
@@ -63,14 +63,14 @@ class WiRutas {
     const rActual = wiPath.actual === '/' ? `/${this.HOME}` : wiPath.limpiar(wiPath.actual);
     this.marcarNav(rActual);
 
-    $(document).on('click', '.winav_item', (e) => {
+    $(document).on('click', '.nv_item', (e) => {
       e.preventDefault();
       const pag = $(e.currentTarget).data('page');
       this.navigate(pag === this.HOME ? '/' : `/${pag}`);
     });
 
     // Prefetch on hover — preloads module for instant navigation
-    $(document).on('mouseenter', '.winav_item[data-page]', (e) => {
+    $(document).on('mouseenter', '.nv_item[data-page]', (e) => {
       const pag = $(e.currentTarget).data('page');
       this.prefetch(pag === this.HOME ? '/' : `/${pag}`);
     });
